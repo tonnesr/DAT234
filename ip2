@@ -1,0 +1,5 @@
+#!/bin/bash
+echo
+'Skriv inn ip'
+read ip
+nmap -sn --open $ip > ping.txt
