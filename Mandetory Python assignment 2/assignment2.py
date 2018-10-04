@@ -40,6 +40,25 @@ for u in pwdlist:
         pwdduplist.append(u)
         uniquepwdlist.remove(u)
         pwdduplist.append(u)
+        
+        
+"""
+Denne delen finner ut hvor mange unike passord hver bruker har
+"""
+def find_unique_passwords():
+    name = ""
+    for i, j in zip(unamelist, pwdlist):
+        teller = -1
+        teller3 = 0
+        for x in unamelist:
+            teller = teller + 1
+            if i == x:
+                teller3 = teller3 + 1
+                name = str(x)
+                #print(x, pwdlist[teller]) printen fungerer ikke helt, mangler 1 passord på hver bruker?
+
+        print(name + " har " + str(teller3) + " forskjellige passord")
+        
 
 unameduplist.sort()
 pwdduplist.sort()
@@ -55,3 +74,4 @@ print ("Unique", len(uniqueunamelist))
 print ("Duplicates", len(unameduplist))
 print ("Unique passwords", len(uniquepwdlist))
 print ("Duplicate passwords", len(pwdduplist))
+find_unique_passwords()
