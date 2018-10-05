@@ -4,12 +4,16 @@ Lettere og finne spesefike brukere og kan og se hvor mange like brukernavn du ha
 Er også numerert slik at du har oversikt over total nr av brukere
 Print er kun for å kunne se hvordan det blir uten å trenge å åpne filen
 """
-
-# EAFP - we try to open the file, then give the exception if it is not found
+"""
+Bruker en except for å fange opp en av de vanligste feilene, har og en except etter for å fange
+opp andre mulige feil
+"""
 try:
-    file = open("passwordlist.txt", "r")
-except IOError:
-    print("File does not exist")
+    file = open("C:\\Users\\Kim\\Downloads\\passwordlists.txt", "r")
+except FileNotFoundError as e:
+    print(e)
+except Exception as e:
+    print(e)
 f = file.read()
 file.close()
 
@@ -18,11 +22,10 @@ passwordlist.sort()
 del passwordlist[0] #Sletter index = som er tom pga filen slutter med et ;
 
 n = 0
-# EAFP - we try to open the file, then give the exception if it is not found
 try:
-    outputFile = open("myOutFile.txt", "w") # lager en ny fil kalt myOutFile
-except IOError:
-    print("File does not exist")
+    outputFile = open("C:\\Users\\Kim\\Downloads\\myOutFile.txt", "w") # lager en ny fil kalt myOutFile
+except Exception as e:
+    print(e)
 outputFile.write("Brukernavn og passordliste")
 outputFile.write("\n")
 for line in passwordlist:
