@@ -9,9 +9,9 @@ Bruker en except for å fange opp en av de vanligste feilene, har og en except e
 opp andre mulige feil
 """
 try:
-    file = open("C:\\Users\\Kim\\Downloads\\passwordlists.txt", "r")
-except FileNotFoundError as e:
-    print(e)
+    file = open("passwordlist.txt", "r")
+except FileNotFoundError:
+    print("File not found")
 except Exception as e:
     print(e)
 f = file.read()
@@ -23,7 +23,7 @@ del passwordlist[0] #Sletter index = som er tom pga filen slutter med et ;
 
 n = 0
 try:
-    outputFile = open("C:\\Users\\Kim\\Downloads\\myOutFile.txt", "w") # lager en ny fil kalt myOutFile
+    outputFile = open("myOutFile.txt", "w") # lager en ny fil kalt myOutFile
 except Exception as e:
     print(e)
 outputFile.write("Brukernavn og passordliste")

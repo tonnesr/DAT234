@@ -50,7 +50,7 @@ for u in pwdlist:
         
 """
 Denne delen finner ut hvor mange unike passord hver bruker har
-Har en generel ty block som kan plukke opp flere feilen som kan oppstå i for loopen
+Har en generel ty block som kan plukke opp flere feilen som kan oppstï¿½ i for loopen
 og printer ut hva som gikk galt
 """
 def find_unique_passwords():
