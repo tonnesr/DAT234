@@ -1,12 +1,12 @@
 """
-Sorterer tekstfilen passwordlist fra oppgven slik at du for en kolone med brukernavn og passord i alfabetisk rekkefølge.
-Lettere og finne spesefike brukere og kan og se hvor mange like brukernavn du har.
-Er også numerert slik at du har oversikt over total nr av brukere
+Sorterer tekstfilen passwordlist fra oppgaven slik at en får en kolonne med brukernavn i alfabetisk rekkefølge og en med passord.
+Lettere og finne spesifike brukere og en kan se hvor mange like brukernavn du har.
+Er nummerert slik at en har oversikt over total nr av brukere
 Print er kun for å kunne se hvordan det blir uten å trenge å åpne filen
 """
 """
 Bruker en except for å fange opp en av de vanligste feilene, har og en except etter for å fange
-opp andre mulige feil
+opp andre mulige feil. Har endra utskriften ved FileNotFoundError til "File not found" i stedet for e
 """
 try:
     file = open("passwordlist.txt", "r")

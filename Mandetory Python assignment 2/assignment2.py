@@ -1,10 +1,11 @@
 # LBYL - we check if the file exists and opens it if it does, then give the exception if it is not found
+# Just prints out the system errormessage (e)
 import os
 try:
     if os.stat("passwordlist.txt"):
         file = open("passwordlist.txt", "r")
-except IOError:
-    print("File not found")
+except IOError as e:
+    print(e)
 f = file.read()
 file.close()
 
@@ -50,7 +51,7 @@ for u in pwdlist:
         
 """
 Denne delen finner ut hvor mange unike passord hver bruker har
-Har en generel ty block som kan plukke opp flere feilen som kan oppst� i for loopen
+Har en generel try block som kan plukke opp flere feilen som kan oppstå i for loopen
 og printer ut hva som gikk galt
 """
 def find_unique_passwords():
