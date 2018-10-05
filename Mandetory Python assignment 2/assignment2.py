@@ -1,7 +1,7 @@
 # LBYL - we check if the file exists and opens it if it does, then give the exception if it is not found
 import os
 try:
-    if os.stat("passwordlist.txt") == true:
+    if os.stat("passwordlist.txt"):
         file = open("passwordlist.txt", "r")
 except IOError:
     print("File not found")
