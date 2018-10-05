@@ -50,20 +50,25 @@ for u in pwdlist:
         
 """
 Denne delen finner ut hvor mange unike passord hver bruker har
+Har en generel ty block som kan plukke opp flere feilen som kan oppstå i for loopen
+og printer ut hva som gikk galt
 """
 def find_unique_passwords():
     name = ""
-    for i, j in zip(unamelist, pwdlist):
-        teller = -1
-        teller3 = 0
-        for x in unamelist:
-            teller = teller + 1
-            if i == x:
-                teller3 = teller3 + 1
-                name = str(x)
-                #print(x, pwdlist[teller]) printen fungerer ikke helt, mangler 1 passord pÃ¥ hver bruker?
+    try:
+        for i, j in zip(unamelist, pwdlist):
+            teller = -1
+            teller2 = 1
+            for x in unamelist:
+                teller = teller + 1
+                if i == x:
+                    teller2 = teller2 + 1
+                    name = str(x)
 
-        print(name + " har " + str(teller3) + " forskjellige passord")
+
+            print(name + " har " + str(teller2) + " forskjellige passord")
+    except Exception as e:
+        print(e)
         
 
 unameduplist.sort()
