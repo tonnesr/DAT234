@@ -7,6 +7,7 @@ Print er kun for å kunne se hvordan det blir uten å trenge å åpne filen
 """
 Bruker en except for å fange opp en av de vanligste feilene, har og en except etter for å fange
 opp andre mulige feil. Har endra utskriften ved FileNotFoundError til "File not found" i stedet for e
+LBYL - prøver å åpne fil før vi leser den, får feilmelding om det ikke går
 """
 try:
     file = open("passwordlist.txt", "r")
